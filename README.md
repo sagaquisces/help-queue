@@ -10,6 +10,6 @@ npm install webpack-dev-server --save-dev
 npm install react-hot-loader --save-dev
 npm install html-webpack-plugin --save-dev
 
-webpack-dev-server
+npm run start
 
 go to http://localhost:8080/
