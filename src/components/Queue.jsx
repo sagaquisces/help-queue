@@ -1,4 +1,6 @@
 import React from "react";
+import TicketList from "./TicketList";
+import NewTicketControl from "./NewTicketControl";
 
 class Queue extends React.Component {
 	constructor (props){
@@ -11,7 +13,8 @@ class Queue extends React.Component {
 	render(){
 		return(
 			<div>
-				Queue
+				<TicketList />
+				<NewTicketControl />
 			</div>
 		);
 	}
