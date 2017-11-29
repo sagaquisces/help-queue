@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import TicketList from "./TicketList";
 import NewTicketControl from "./NewTicketControl";
+import Queue from "./Queue";
 
 function App() {
 	return (
@@ -9,6 +10,7 @@ function App() {
 			<Header />
 			<TicketList />
 			<NewTicketControl />
+			<Queue />
 		</div>
 	);
 }
