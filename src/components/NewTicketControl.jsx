@@ -1,4 +1,5 @@
 import React from "react";
+import NewTicketForm from "./NewTicketForm";
 
 class NewTicketControl extends React.Component {
 
@@ -13,8 +14,16 @@ class NewTicketControl extends React.Component {
 	}
 
 	render(){
+		let formAreaContent=null;
+		if(this.state.formVisibleOnPage){
+			formAreaContent = <NewTicketForm/>;
+		} else {
+			formAreaContent = <button onClick={this.handleDisplayingNewTicketForm}>Request Help</button>;
+		}
 		return (
-			<button onClick={this.handleDisplayingNewTicketForm}>Request Help</button>
+			<div>
+				{formAreaContent}
+			</div>
 		);
 	}
 }
