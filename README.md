@@ -7,8 +7,9 @@ npm install babel-core babel-loader babel-preset-env babel-preset-react --save-d
 npm install prop-types --save
 (npm install webpack-dev-server -g)
 npm install webpack-dev-server --save-dev
+npm install react-hot-loader --save-dev
+npm install html-webpack-plugin --save-dev
 
-webpack
 webpack-dev-server
 
 go to http://localhost:8080/
