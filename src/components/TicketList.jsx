@@ -3,7 +3,10 @@ import Ticket from "./Ticket"
 
 function TicketList() {
 	return(
-		<Ticket />
+		<Ticket
+			location="G3"
+			names="Devin and Devon"
+			issue="Bootstrap won't fire up correctly" />
 	);
 }
 
