@@ -5,10 +5,13 @@ class NewTicketControl extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {formVisibleOnPage: false};
+		this.handleDisplayingNewTicketForm = this.handleDisplayingNewTicketForm.bind(this);
+		console.log(this);
 	}
 
 	handleDisplayingNewTicketForm(e) {
-		console.log("New Ticket button was clicked");
+		this.setState({formVisibleOnPage: true});
+		console.log(this);
 	}
 
 	render(){
