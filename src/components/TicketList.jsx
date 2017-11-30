@@ -1,29 +1,13 @@
 import React from "react";
 import Ticket from "./Ticket"
+import PropTypes from 'prop-types';
 
-var masterTicketList = [
-	{
-		names: "Thato and Haley",
-		location: "3A",
-		issue: "Firebase won't save record. Halp."
-	},
-	{
-		names: "Sleater and Kinney",
-		location: "4B",
-		issue: "Fox image not displaying on page, can only see duck?"
-	},
-	{
-		names: "Imani & Jacob",
-		location: "9F",
-		issue: "Donkey picture not displaying on hover in Zoology app. :("
-	}
-];
-
-function TicketList() {
+function TicketList(props) {
+	console.log(props.ticketList);
 	return(
 		<div>
 			<hr/>
-			{masterTicketList.map((ticket, index) =>
+			{props.ticketList.map((ticket, index) =>
 				<Ticket
 					location={ticket.location}
 					names={ticket.names}
@@ -32,6 +16,10 @@ function TicketList() {
 			)}
 		</div>
 	);
+}
+
+TicketList.propTypes = {
+	tickeList: PropTypes.array
 }
 
 export default TicketList;
