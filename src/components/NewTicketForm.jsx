@@ -2,6 +2,8 @@ import React from "react";
 import Ticket from "../models/ticket.js";
 import PropTypes from "prop-types";
 
+import { Button } from "react-bootstrap";
+
 class NewTicketForm extends React.Component {
 
 	constructor(props){
@@ -36,7 +38,7 @@ class NewTicketForm extends React.Component {
 						type="text"
 						id="issue"
 						placeholder="Describe your issue." />
-					<button type="submit">Help!</button>
+					<Button block bsStyle="primary" bsSize="large" type="submit">Help!</Button>
 				</form>
 			</div>
 		);

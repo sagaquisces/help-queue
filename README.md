@@ -9,6 +9,7 @@ npm install prop-types --save
 npm install webpack-dev-server --save-dev
 npm install react-hot-loader --save-dev
 npm install html-webpack-plugin --save-dev
+npm install react-bootstrap --save
 
 npm run start
 
