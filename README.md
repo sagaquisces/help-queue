@@ -1,4 +1,5 @@
 # help-queue
+npm install moment
 
 npm install
 	react
@@ -23,8 +24,6 @@ npm install
 (npm install webpack-dev-server -g)
 (npm install eslint -g)
 (npm install eslint-plugin-react -g)
-
-npm run lint
 
 npm run start
 

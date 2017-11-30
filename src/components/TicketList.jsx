@@ -11,6 +11,7 @@ function TicketList(props) {
                     location={ticket.location}
                     names={ticket.names}
                     issue={ticket.issue}
+                    timeSinceOpened={ticket.timeSinceOpened}
                     key={index} />
             )}
         </div>
@@ -18,7 +19,7 @@ function TicketList(props) {
 }
 
 TicketList.propTypes = {
-    ticketList: PropTypes.array
+    ticketList: PropTypes.array.isRequired
 };
 
 export default TicketList;

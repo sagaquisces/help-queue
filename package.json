@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sagaquisces/help-queue#readme",
   "dependencies": {
+    "moment": "^2.19.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
