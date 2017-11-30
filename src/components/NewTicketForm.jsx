@@ -26,7 +26,7 @@ class NewTicketForm extends React.Component {
 	render(){
 		return (
 			<div>
-				<Form inline onSubmit={this.handleNewTicketFormSubmission}>
+				<Form onSubmit={this.handleNewTicketFormSubmission}>
 
 					<FormGroup>
 						<FormControl
