@@ -1,15 +1,26 @@
 # help-queue
 
-npm install react react-dom --save
-npm install webpack --save-dev
+npm install
+	react
+	react-dom
+	prop-types
+	react-bootstrap
+		--save
+
+npm install
+	webpack
+	babel-core
+	babel-loader
+	babel-preset-env
+	babel-preset-react
+	webpack-dev-server
+	react-hot-loader
+	html-webpack-plugin
+		--save-dev
+
+
 (npm install webpack -g)
-npm install babel-core babel-loader babel-preset-env babel-preset-react --save-dev
-npm install prop-types --save
 (npm install webpack-dev-server -g)
-npm install webpack-dev-server --save-dev
-npm install react-hot-loader --save-dev
-npm install html-webpack-plugin --save-dev
-npm install react-bootstrap --save
 
 npm run start
 
