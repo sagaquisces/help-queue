@@ -1,8 +1,12 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import Ticket from "../models/ticket.js";
 import PropTypes from "prop-types";
 
 import { Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { FormGroup } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 
 class NewTicketForm extends React.Component {
 
@@ -13,8 +17,8 @@ class NewTicketForm extends React.Component {
 
 	handleNewTicketFormSubmission(e) {
 		e.preventDefault();
-		const { _names, _location, _issue } = this.refs;
-		var newTicket = new Ticket(_names.value, _location.value, _issue.value);
+		// const {_location, _issue } = this.refs;
+		var newTicket = new Ticket(ReactDOM.findDOMNode(this._names).value, ReactDOM.findDOMNode(this._location).value, ReactDOM.findDOMNode(this._issue).value);
 		this.props.onNewTicketCreation(newTicket);
 		this.props.hideFormAfterSubmission();
 	}
@@ -22,24 +26,33 @@ class NewTicketForm extends React.Component {
 	render(){
 		return (
 			<div>
-				<form onSubmit={this.handleNewTicketFormSubmission}>
-					<input
-						ref="_names"
-						type="text"
-						id="names"
-						placeholder="Pair Names" />
-					<input
-						ref="_location"
-						type="text"
-						id="location"
-						placeholder="Location" />
-					<textarea
-						ref="_issue"
-						type="text"
-						id="issue"
-						placeholder="Describe your issue." />
-					<Button block bsStyle="primary" bsSize="large" type="submit">Help!</Button>
-				</form>
+				<Form inline onSubmit={this.handleNewTicketFormSubmission}>
+
+					<FormGroup>
+						<FormControl
+							inputRef={ref => { this._names = ref; }}
+							type="text"
+							id="names"
+							placeholder="Pair Names" />
+					</FormGroup>
+
+					<FormGroup>
+						<FormControl
+							inputRef={ref => { this._location = ref; }}
+							type="text"
+							id="location"
+							placeholder="Location" />
+					</FormGroup>
+					<FormGroup>
+						<FormControl
+							inputRef={ref => { this._issue = ref;}}
+							componentClass="textarea"
+							type="text"
+							id="issue"
+							placeholder="Describe your issue." />
+					</FormGroup>
+					<Button bsStyle="warning" type="submit">Help!</Button>
+				</Form>
 			</div>
 		);
 	}
