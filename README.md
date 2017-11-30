@@ -16,11 +16,15 @@ npm install
 	webpack-dev-server
 	react-hot-loader
 	html-webpack-plugin
+	eslint-loader
 		--save-dev
-
 
 (npm install webpack -g)
 (npm install webpack-dev-server -g)
+(npm install eslint -g)
+(npm install eslint-plugin-react -g)
+
+npm run lint
 
 npm run start
 
