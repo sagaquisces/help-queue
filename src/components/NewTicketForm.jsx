@@ -5,10 +5,7 @@ import { connect } from 'react-redux';
 import c from './../constants';
 import { v4 } from 'uuid';
 
-import { Button } from "react-bootstrap";
-import { Form } from "react-bootstrap";
-import { FormGroup } from "react-bootstrap";
-import { FormControl } from "react-bootstrap";
+import { Button, Form, FormGroup, FormControl } from "react-bootstrap";
 
 class NewTicketForm extends React.Component {
 

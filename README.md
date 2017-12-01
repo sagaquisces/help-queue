@@ -9,6 +9,7 @@ npm install
 	redux
 	react-redux
 	uuid
+	react-router-dom
 		--save
 
 npm install
