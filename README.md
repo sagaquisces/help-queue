@@ -6,6 +6,8 @@ npm install
 	react-dom
 	prop-types
 	react-bootstrap
+	redux
+	react-redux
 		--save
 
 npm install
@@ -18,6 +20,8 @@ npm install
 	react-hot-loader
 	html-webpack-plugin
 	eslint-loader
+	jest
+	babel-jest
 		--save-dev
 
 (npm install webpack -g)
