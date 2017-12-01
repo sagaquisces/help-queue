@@ -8,6 +8,7 @@ npm install
 	react-bootstrap
 	redux
 	react-redux
+	uuid
 		--save
 
 npm install

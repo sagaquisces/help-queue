@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Ticket from "../models/ticket.js";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import c from './../constants';
+import { v4 } from 'uuid';
 
 import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
@@ -22,15 +22,14 @@ class NewTicketForm extends React.Component {
         const { dispatch } = this.props;
         const action = {
             type: c.ADD_TICKET,
-            id: null,
+            id: v4(),
             names: ReactDOM.findDOMNode(this._names).value,
             location: ReactDOM.findDOMNode(this._location).value,
             issue: ReactDOM.findDOMNode(this._issue).value,
             timeOpened: new Date().getTime()
         }
+        console.log(action.id);
         dispatch(action);
-        var newTicket = new Ticket(ReactDOM.findDOMNode(this._names).value, ReactDOM.findDOMNode(this._location).value, ReactDOM.findDOMNode(this._issue).value);
-        this.props.onNewTicketCreation(newTicket);
         this.props.hideFormAfterSubmission();
     }
 
@@ -69,10 +68,7 @@ class NewTicketForm extends React.Component {
 }
 
 NewTicketForm.propTypes = {
-    onNewTicketCreation: PropTypes.func,
     hideFormAfterSubmission : PropTypes.func
 };
 
-NewTicketForm = connect()(NewTicketForm);
-
-export default NewTicketForm;
+export default connect()(NewTicketForm);
