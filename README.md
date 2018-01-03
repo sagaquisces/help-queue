@@ -34,3 +34,5 @@ npm install
 npm run start
 
 go to http://localhost:8080/
+
+Or see it live on Surge at: http://handsome-cake.surge.sh/#/
