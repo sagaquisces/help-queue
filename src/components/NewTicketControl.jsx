@@ -1,56 +1,59 @@
-import React from "react";
-import NewTicketForm from "./NewTicketForm";
-import PropTypes from "prop-types";
+import React from "react"
+import NewTicketForm from "./NewTicketForm"
+import PropTypes from "prop-types"
 
-import { Button } from "react-bootstrap";
-import { Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap"
+import { Modal } from "react-bootstrap"
 
 class NewTicketControl extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {formModalIsShowing: false};
-        this.showFormModal = this.showFormModal.bind(this);
-        this.hideFormModal = this.hideFormModal.bind(this);
-    }
+  constructor(props) {
+    super(props)
+    this.state = {formModalIsShowing: false}
+    this.showFormModal = this.showFormModal.bind(this)
+    this.hideFormModal = this.hideFormModal.bind(this)
+  }
 
-    showFormModal() {
-        this.setState({formModalIsShowing: true});
-    }
+  showFormModal() {
+    this.setState({formModalIsShowing: true})
+  }
 
-    hideFormModal() {
-        this.setState({formModalIsShowing: false});
-    }
+  hideFormModal() {
+    this.setState({formModalIsShowing: false})
+  }
 
-    render(){
-        return(
-            <div>
-                <Button
-                    block
-                    bsStyle="primary"
-                    bsSize="large"
-                    onClick={this.showFormModal}>
-                        Request Help
-                </Button>
-                <Modal
-                    show={this.state.formModalIsShowing}
-                    onHide={this.hideFormModal}
-                    bsSize="large">
-                    <Modal.Header>
-                        <Modal.Title>Request Help!</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <NewTicketForm
-                            hideFormAfterSubmission = {this.hideFormModal}/>
-                    </Modal.Body>
-                </Modal>
-            </div>
-        );
-    }
+  render(){
+    return(
+      <div>
+        <Button
+          block
+          bsStyle="primary"
+          bsSize="large"
+          onClick={this.showFormModal}
+        >
+          Request Help
+        </Button>
+        <Modal
+          show={this.state.formModalIsShowing}
+          onHide={this.hideFormModal}
+          bsSize="large"
+        >
+          <Modal.Header>
+            <Modal.Title>Request Help!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <NewTicketForm
+              hideFormAfterSubmission = {this.hideFormModal}
+            />
+          </Modal.Body>
+        </Modal>
+      </div>
+    )
+  }
 }
 
 NewTicketControl.propTypes = {
-    hideFormAfterSubmission: PropTypes.func
-};
+  hideFormAfterSubmission: PropTypes.func
+}
 
-export default NewTicketControl;
+export default NewTicketControl

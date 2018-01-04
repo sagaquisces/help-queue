@@ -1,30 +1,34 @@
-import React from "react";
-import Ticket from "./Ticket";
-import PropTypes from "prop-types";
+import React from "react"
+import Ticket from "./Ticket"
+import PropTypes from "prop-types"
 
-function TicketList(props) {
-    return(
-        <div>
-            <hr/>
-            {props.ticketList.map((ticket, index) =>
-                <Ticket
-                    location={ticket.location}
-                    names={ticket.names}
-                    issue={ticket.issue}
-                    timeOpened={ticket.timeOpened}
-                    key={ticket.id}
-                    id={ticket.id}
-                    currentRoute={props.currentRoute}
-                    handleClosingTicket={props.handleClosingTicket}/>
-            )}
-        </div>
-    );
+const TicketList = ({
+  ticketList,
+  currentRoute,
+  handleClosingTicket
+}) => {
+  return(
+    <div>
+      <hr/>
+      {ticketList.map((ticket) =>
+        <Ticket
+          location={ticket.location}
+          names={ticket.names}
+          issue={ticket.issue}
+          timeOpened={ticket.timeOpened}
+          key={ticket.id}
+          id={ticket.id}
+          currentRoute={currentRoute}
+          handleClosingTicket={handleClosingTicket}/>
+      )}
+    </div>
+  )
 }
 
 TicketList.propTypes = {
-    ticketList: PropTypes.array.isRequired,
-    currentRoute: PropTypes.string,
-    handleClosingTicket: PropTypes.func
-};
+  ticketList: PropTypes.array.isRequired,
+  currentRoute: PropTypes.string,
+  handleClosingTicket: PropTypes.func
+}
 
-export default TicketList;
+export default TicketList
